@@ -12,4 +12,5 @@ find . -path ./node_modules -prune -o -name '*.sh' -exec \
 
 git add -A
 git commit -m "update" || true
+git pull --rebase
 git push
