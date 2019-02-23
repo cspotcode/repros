@@ -8,7 +8,7 @@ re='```
 [[ "$readme" =~ $re ]] || echo false
 printf "%s" "${BASH_REMATCH[1]}" > ./.github/extracted
 
-token="$GITUB_TOKEN"
+token="$GITHUB_TOKEN"
 GITHUB_TOKEN=''
 set -x +e
 . ./.github/extracted | tee ./.github/output
