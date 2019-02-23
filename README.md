@@ -9,8 +9,6 @@ git status
 cat $GITHUB_EVENT_PATH
 ```
 
-[Logs](TODO)
+[Logs](https://github.com/cspotcode/repros/runs/67686248)
 
-```output
-# output will be pasted here
-```
+
