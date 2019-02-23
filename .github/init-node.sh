@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
 
 yarn init -y
-git commit 
+
+echo node_modules > .gitignore
