@@ -14,12 +14,30 @@ set -x +e
 . ./.github/extracted | tee ./.github/output
 
 GITHUB_TOKEN="$token"
+
+# Get ID of this Actions run
+checkRunId=$(
+    curl -H Accept:application/vnd.github.antiope-preview+json \
+        "https://api.github.com/repos/cspotcode/repros/commits/$( git rev-parse HEAD )/check-runs" | \
+        ./.github/extract-json.js check_runs 0 id
+)
+
 readme=$(cat README.md)
-re='(.*)```output
+re='(.*)
+\[Logs\]\((.*)\)
+
+```output
 .*
-```(.*)'
+```
+(.*)'
 [[ "$readme" =~ $re ]] || echo false
-printf "%s" "${BASH_REMATCH[1]}$( cat ./.github/output )${BASH_REMATCH[3]}" > ./README.md
+printf "%s" "${BASH_REMATCH[1]}
+[Logs](https://github.com/cspotcode/repros/runs/$checkRunId)
+
+```output
+$( cat ./.github/output )
+```
+${BASH_REMATCH[3]}" > ./README.md
 git add README.md
-git commit -m "update README with script output"
+git commit -m "Update README with script output"
 git push
