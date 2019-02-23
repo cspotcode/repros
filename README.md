@@ -8,3 +8,7 @@ git status
 
 cat $GITHUB_EVENT_PATH
 ```
+
+```output
+# output will be pasted here
+```
