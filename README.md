@@ -3,6 +3,11 @@
 For CLI tools, load times are more important than dependency download size.  This benchmark compares the load times
 of various ways to `require()` a `_.get()` function or equivalent.
 
+Scroll to the bottom for a summary.  `lodash/get` is no faster than `lodash.min.js`.  `lodash.get` is fastest,
+but consider if `lodash` will already be in npm cache and/or in-memory from another library `require()`ing it.
+
+Remember fs perf hit is exacerbated on Windows.
+
 ```bash
 # repro code goes here
 set -euxo pipefail
