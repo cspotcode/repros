@@ -2,16 +2,17 @@
 set -euo pipefail
 
 readme=$(cat README.md)
-re='```
-(.*)
+re='```bash
+(.*?)
 ```'
-[[ "$readme" =~ $re ]] || echo false
+[[ "$readme" =~ $re ]]
 printf "%s" "${BASH_REMATCH[1]}" > ./.github/extracted
 
 token="$GITHUB_TOKEN"
 GITHUB_TOKEN=''
 set -x +e
 . ./.github/extracted | tee ./.github/output
+set -e
 
 GITHUB_TOKEN="$token"
 
@@ -22,21 +23,20 @@ checkRunId=$(
         ./.github/extract-json.js check_runs 0 id
 )
 
-readme=$(cat README.md)
 re='(.*)
-\[Logs\]\((.*)\)
+\[Logs\]\((.*?)\)
 
 ```output
 .*
 ```
 (.*)'
-[[ "$readme" =~ $re ]] || echo false
+[[ "$readme" =~ $re ]]
 printf "%s" "${BASH_REMATCH[1]}
 [Logs](https://github.com/cspotcode/repros/runs/$checkRunId)
 
-```output
+\`\`\`output
 $( cat ./.github/output )
-```
+\`\`\`
 ${BASH_REMATCH[3]}" > ./README.md
 git add README.md
 git commit -m "Update README with script output"
