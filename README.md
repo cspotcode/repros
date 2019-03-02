@@ -30,30 +30,388 @@ node ./aggregate.js
 
 *The script above is extracted, executed by bash in docker, and stdout is inserted below.  All the magic happens in ./.github/run.sh*
 
-[Logs](https://github.com/cspotcode/repros/runs/71555675)
+[Logs](https://github.com/cspotcode/repros/runs/71559406)
 
 ```output
++ yarn install
+yarn install v1.13.0
+[1/4] Resolving packages...
+[2/4] Fetching packages...
+[3/4] Linking dependencies...
+[4/4] Building fresh packages...
+Done in 1.75s.
 + for i in 0 1 2 3 4 5 6 7 8 9
-+ test lodash lodash
++ test lodash 1.lodash
 + node -e '
         const start = +new Date;
         require('\''lodash'\'');
         const end = +new Date;
         console.log(end - start)
     '
-internal/modules/cjs/loader.js:583
-    throw err;
-    ^
++ test lodash/lodash.min.js 2.lodash.min.js
++ node -e '
+        const start = +new Date;
+        require('\''lodash/lodash.min.js'\'');
+        const end = +new Date;
+        console.log(end - start)
+    '
++ test lodash.get 3.lodash.get
++ node -e '
+        const start = +new Date;
+        require('\''lodash.get'\'');
+        const end = +new Date;
+        console.log(end - start)
+    '
++ test lodash/get 4.lodash_slash_get
++ node -e '
+        const start = +new Date;
+        require('\''lodash/get'\'');
+        const end = +new Date;
+        console.log(end - start)
+    '
++ test get-value 5.get-value
++ node -e '
+        const start = +new Date;
+        require('\''get-value'\'');
+        const end = +new Date;
+        console.log(end - start)
+    '
++ for i in 0 1 2 3 4 5 6 7 8 9
++ test lodash 1.lodash
++ node -e '
+        const start = +new Date;
+        require('\''lodash'\'');
+        const end = +new Date;
+        console.log(end - start)
+    '
++ test lodash/lodash.min.js 2.lodash.min.js
++ node -e '
+        const start = +new Date;
+        require('\''lodash/lodash.min.js'\'');
+        const end = +new Date;
+        console.log(end - start)
+    '
++ test lodash.get 3.lodash.get
++ node -e '
+        const start = +new Date;
+        require('\''lodash.get'\'');
+        const end = +new Date;
+        console.log(end - start)
+    '
++ test lodash/get 4.lodash_slash_get
++ node -e '
+        const start = +new Date;
+        require('\''lodash/get'\'');
+        const end = +new Date;
+        console.log(end - start)
+    '
++ test get-value 5.get-value
++ node -e '
+        const start = +new Date;
+        require('\''get-value'\'');
+        const end = +new Date;
+        console.log(end - start)
+    '
++ for i in 0 1 2 3 4 5 6 7 8 9
++ test lodash 1.lodash
++ node -e '
+        const start = +new Date;
+        require('\''lodash'\'');
+        const end = +new Date;
+        console.log(end - start)
+    '
++ test lodash/lodash.min.js 2.lodash.min.js
++ node -e '
+        const start = +new Date;
+        require('\''lodash/lodash.min.js'\'');
+        const end = +new Date;
+        console.log(end - start)
+    '
++ test lodash.get 3.lodash.get
++ node -e '
+        const start = +new Date;
+        require('\''lodash.get'\'');
+        const end = +new Date;
+        console.log(end - start)
+    '
++ test lodash/get 4.lodash_slash_get
++ node -e '
+        const start = +new Date;
+        require('\''lodash/get'\'');
+        const end = +new Date;
+        console.log(end - start)
+    '
++ test get-value 5.get-value
++ node -e '
+        const start = +new Date;
+        require('\''get-value'\'');
+        const end = +new Date;
+        console.log(end - start)
+    '
++ for i in 0 1 2 3 4 5 6 7 8 9
++ test lodash 1.lodash
++ node -e '
+        const start = +new Date;
+        require('\''lodash'\'');
+        const end = +new Date;
+        console.log(end - start)
+    '
++ test lodash/lodash.min.js 2.lodash.min.js
++ node -e '
+        const start = +new Date;
+        require('\''lodash/lodash.min.js'\'');
+        const end = +new Date;
+        console.log(end - start)
+    '
++ test lodash.get 3.lodash.get
++ node -e '
+        const start = +new Date;
+        require('\''lodash.get'\'');
+        const end = +new Date;
+        console.log(end - start)
+    '
++ test lodash/get 4.lodash_slash_get
++ node -e '
+        const start = +new Date;
+        require('\''lodash/get'\'');
+        const end = +new Date;
+        console.log(end - start)
+    '
++ test get-value 5.get-value
++ node -e '
+        const start = +new Date;
+        require('\''get-value'\'');
+        const end = +new Date;
+        console.log(end - start)
+    '
++ for i in 0 1 2 3 4 5 6 7 8 9
++ test lodash 1.lodash
++ node -e '
+        const start = +new Date;
+        require('\''lodash'\'');
+        const end = +new Date;
+        console.log(end - start)
+    '
++ test lodash/lodash.min.js 2.lodash.min.js
++ node -e '
+        const start = +new Date;
+        require('\''lodash/lodash.min.js'\'');
+        const end = +new Date;
+        console.log(end - start)
+    '
++ test lodash.get 3.lodash.get
++ node -e '
+        const start = +new Date;
+        require('\''lodash.get'\'');
+        const end = +new Date;
+        console.log(end - start)
+    '
++ test lodash/get 4.lodash_slash_get
++ node -e '
+        const start = +new Date;
+        require('\''lodash/get'\'');
+        const end = +new Date;
+        console.log(end - start)
+    '
++ test get-value 5.get-value
++ node -e '
+        const start = +new Date;
+        require('\''get-value'\'');
+        const end = +new Date;
+        console.log(end - start)
+    '
++ for i in 0 1 2 3 4 5 6 7 8 9
++ test lodash 1.lodash
++ node -e '
+        const start = +new Date;
+        require('\''lodash'\'');
+        const end = +new Date;
+        console.log(end - start)
+    '
++ test lodash/lodash.min.js 2.lodash.min.js
++ node -e '
+        const start = +new Date;
+        require('\''lodash/lodash.min.js'\'');
+        const end = +new Date;
+        console.log(end - start)
+    '
++ test lodash.get 3.lodash.get
++ node -e '
+        const start = +new Date;
+        require('\''lodash.get'\'');
+        const end = +new Date;
+        console.log(end - start)
+    '
++ test lodash/get 4.lodash_slash_get
++ node -e '
+        const start = +new Date;
+        require('\''lodash/get'\'');
+        const end = +new Date;
+        console.log(end - start)
+    '
++ test get-value 5.get-value
++ node -e '
+        const start = +new Date;
+        require('\''get-value'\'');
+        const end = +new Date;
+        console.log(end - start)
+    '
++ for i in 0 1 2 3 4 5 6 7 8 9
++ test lodash 1.lodash
++ node -e '
+        const start = +new Date;
+        require('\''lodash'\'');
+        const end = +new Date;
+        console.log(end - start)
+    '
++ test lodash/lodash.min.js 2.lodash.min.js
++ node -e '
+        const start = +new Date;
+        require('\''lodash/lodash.min.js'\'');
+        const end = +new Date;
+        console.log(end - start)
+    '
++ test lodash.get 3.lodash.get
++ node -e '
+        const start = +new Date;
+        require('\''lodash.get'\'');
+        const end = +new Date;
+        console.log(end - start)
+    '
++ test lodash/get 4.lodash_slash_get
++ node -e '
+        const start = +new Date;
+        require('\''lodash/get'\'');
+        const end = +new Date;
+        console.log(end - start)
+    '
++ test get-value 5.get-value
++ node -e '
+        const start = +new Date;
+        require('\''get-value'\'');
+        const end = +new Date;
+        console.log(end - start)
+    '
++ for i in 0 1 2 3 4 5 6 7 8 9
++ test lodash 1.lodash
++ node -e '
+        const start = +new Date;
+        require('\''lodash'\'');
+        const end = +new Date;
+        console.log(end - start)
+    '
++ test lodash/lodash.min.js 2.lodash.min.js
++ node -e '
+        const start = +new Date;
+        require('\''lodash/lodash.min.js'\'');
+        const end = +new Date;
+        console.log(end - start)
+    '
++ test lodash.get 3.lodash.get
++ node -e '
+        const start = +new Date;
+        require('\''lodash.get'\'');
+        const end = +new Date;
+        console.log(end - start)
+    '
++ test lodash/get 4.lodash_slash_get
++ node -e '
+        const start = +new Date;
+        require('\''lodash/get'\'');
+        const end = +new Date;
+        console.log(end - start)
+    '
++ test get-value 5.get-value
++ node -e '
+        const start = +new Date;
+        require('\''get-value'\'');
+        const end = +new Date;
+        console.log(end - start)
+    '
++ for i in 0 1 2 3 4 5 6 7 8 9
++ test lodash 1.lodash
++ node -e '
+        const start = +new Date;
+        require('\''lodash'\'');
+        const end = +new Date;
+        console.log(end - start)
+    '
++ test lodash/lodash.min.js 2.lodash.min.js
++ node -e '
+        const start = +new Date;
+        require('\''lodash/lodash.min.js'\'');
+        const end = +new Date;
+        console.log(end - start)
+    '
++ test lodash.get 3.lodash.get
++ node -e '
+        const start = +new Date;
+        require('\''lodash.get'\'');
+        const end = +new Date;
+        console.log(end - start)
+    '
++ test lodash/get 4.lodash_slash_get
++ node -e '
+        const start = +new Date;
+        require('\''lodash/get'\'');
+        const end = +new Date;
+        console.log(end - start)
+    '
++ test get-value 5.get-value
++ node -e '
+        const start = +new Date;
+        require('\''get-value'\'');
+        const end = +new Date;
+        console.log(end - start)
+    '
++ for i in 0 1 2 3 4 5 6 7 8 9
++ test lodash 1.lodash
++ node -e '
+        const start = +new Date;
+        require('\''lodash'\'');
+        const end = +new Date;
+        console.log(end - start)
+    '
++ test lodash/lodash.min.js 2.lodash.min.js
++ node -e '
+        const start = +new Date;
+        require('\''lodash/lodash.min.js'\'');
+        const end = +new Date;
+        console.log(end - start)
+    '
++ test lodash.get 3.lodash.get
++ node -e '
+        const start = +new Date;
+        require('\''lodash.get'\'');
+        const end = +new Date;
+        console.log(end - start)
+    '
++ test lodash/get 4.lodash_slash_get
++ node -e '
+        const start = +new Date;
+        require('\''lodash/get'\'');
+        const end = +new Date;
+        console.log(end - start)
+    '
++ test get-value 5.get-value
++ node -e '
+        const start = +new Date;
+        require('\''get-value'\'');
+        const end = +new Date;
+        console.log(end - start)
+    '
++ node ./aggregate.js
 
-Error: Cannot find module 'lodash'
-    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:581:15)
-    at Function.Module._load (internal/modules/cjs/loader.js:507:25)
-    at Module.require (internal/modules/cjs/loader.js:637:17)
-    at require (internal/modules/cjs/helpers.js:22:18)
-    at [eval]:3:9
-    at Script.runInThisContext (vm.js:96:20)
-    at Object.runInThisContext (vm.js:303:38)
-    at Object.<anonymous> ([eval]-wrapper:6:22)
-    at Module._compile (internal/modules/cjs/loader.js:689:30)
-    at evalScript (internal/bootstrap/node.js:587:27)
+ 1.lodash  | 2.lodash.min.js | 3.lodash.get | 4.lodash_slash_get | 5.get-value 
+    30     |     25     |     6      |     26     |     5     
+    30     |     27     |     6      |     24     |     5     
+    30     |     26     |     6      |     24     |     5     
+    30     |     25     |     5      |     24     |     5     
+    32     |     25     |     5      |     24     |     5     
+    31     |     24     |     5      |     26     |     5     
+    30     |     25     |     6      |     25     |     6     
+    31     |     24     |     5      |     24     |     5     
+    38     |     25     |     5      |     25     |     5     
+   Avg     |    Avg     |    Avg     |    Avg     |    Avg     
+    31     |     25     |     6      |     25     |     5      
 ```
