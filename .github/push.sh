@@ -14,6 +14,6 @@ git add -A
 git commit -m "update" || true
 git fetch
 branch="$( git rev-parse --abbrev-ref HEAD )"
-git rebase "$branch" 
+git rebase "origin/$branch"
 git push origin "$branch"
 
