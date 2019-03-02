@@ -12,6 +12,8 @@ find . -path ./node_modules -prune -o -name '*.sh' -exec \
 
 git add -A
 git commit -m "update" || true
-git pull --rebase
-git push origin "$( git rev-parse --abbrev-ref HEAD )"
+git fetch
+branch="$( git rev-parse --abbrev-ref HEAD )"
+git rebase "$branch" 
+git push origin "$branch"
 
