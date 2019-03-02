@@ -36,7 +36,9 @@ printf "%s" "${BASH_REMATCH[1]}
 \`\`\`output
 $( cat ./.github/output )
 \`\`\`${BASH_REMATCH[3]}" > ./README.md
-git add README.md
-git config user.email cspotcode@gmail.com
-git commit -m "Update README with script output"
-git push origin "$( git rev-parse --abbrev-ref HEAD )"
+if [[ "${GITHUB_EVENT_PATH:-}" != "" ]] ; then
+    git add README.md
+    git config user.email cspotcode@gmail.com
+    git commit -m "Update README with script output"
+    git push origin "$( git rev-parse --abbrev-ref HEAD )"
+fi
