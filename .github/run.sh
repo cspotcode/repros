@@ -39,4 +39,4 @@ $( cat ./.github/output )
 git add README.md
 git config user.email cspotcode@gmail.com
 git commit -m "Update README with script output"
-git push
+git push origin "$( git rev-parse --abbrev-ref HEAD )"
