@@ -8,7 +8,7 @@ re='```bash
 [[ "$readme" =~ $re ]]
 printf "%s" "${BASH_REMATCH[1]}" > ./.github/extracted
 
-token="$GITHUB_TOKEN"
+token="${GITHUB_TOKEN:-}"
 GITHUB_TOKEN=''
 set -x +e
 . ./.github/extracted | tee ./.github/output
@@ -28,16 +28,14 @@ re='(.*)
 
 ```output
 .*
-```
-(.*)'
+```(.*)$'
 [[ "$readme" =~ $re ]]
 printf "%s" "${BASH_REMATCH[1]}
 [Logs](https://github.com/cspotcode/repros/runs/$checkRunId)
 
 \`\`\`output
 $( cat ./.github/output )
-\`\`\`
-${BASH_REMATCH[3]}" > ./README.md
+\`\`\`${BASH_REMATCH[3]}" > ./README.md
 git add README.md
 git commit -m "Update README with script output"
 git push
