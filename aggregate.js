@@ -2,7 +2,7 @@ const fs = require('fs');
 const _ = require('lodash');
 const {range} = _;
 function pad(val) {
-    return _.pad(val, 10);
+    return _.pad(val, 15);
 }
 function row(vals) {
     return vals.map(val => _.pad(val, 10)).join(' | ');
