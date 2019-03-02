@@ -37,6 +37,6 @@ printf "%s" "${BASH_REMATCH[1]}
 $( cat ./.github/output )
 \`\`\`${BASH_REMATCH[3]}" > ./README.md
 git add README.md
-git commit -m "Update README with script output"
 git config user.email cspotcode@gmail.com
+git commit -m "Update README with script output"
 git push
