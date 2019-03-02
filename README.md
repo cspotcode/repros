@@ -4,9 +4,9 @@ Description
 
 ```bash
 # repro code goes here
-git status
+set -euxo pipefail
 
-cat $GITHUB_EVENT_PATH
+echo Hello world!
 ```
 
 *The script above is extracted, executed by bash in docker, and stdout is inserted below.  All the magic happens in ./.github/run.sh*
