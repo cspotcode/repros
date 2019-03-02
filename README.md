@@ -12,13 +12,13 @@ function test {
         require('$1');
         const end = +new Date;
         console.log(end - start)
-    " >> "log-$1"
+    " >> "log-$2"
 }
-for i in 1 2 3 4 5 6 7 8 9 10 ; do
-    test lodash
-    test lodash.get
-    test lodash/get
-    test get-value
+for i in 0 1 2 3 4 5 6 7 8 9 ; do
+    test lodash lodash
+    test lodash.get lodash.get
+    test lodash/get lodash_slash_get
+    test get-value get-value
 done
 
 node ./aggregate.js

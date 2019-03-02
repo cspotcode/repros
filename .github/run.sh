@@ -2,19 +2,19 @@
 set -euo pipefail
 
 readme=$(cat README.md)
-re='```bash
-(.*?)
-```'
-[[ "$readme" =~ $re ]]
-printf "%s" "${BASH_REMATCH[1]}" > ./.github/extracted
+./.github/regexp.js "$readme" '```bash\n([\s\S]*?)\n```' '' 1 > ./.github/extracted
 
 token="${GITHUB_TOKEN:-}"
 GITHUB_TOKEN=''
 set -x +e
-. ./.github/extracted | tee ./.github/output
+bash ./.github/extracted 2>&1 | tee ./.github/output
 set -e
 
 GITHUB_TOKEN="$token"
+
+if [[ "${GITHUB_EVENT_PATH:-}" = "" ]] ; then
+    exit
+fi
 
 # Get ID of this Actions run
 checkRunId=$(
@@ -36,9 +36,7 @@ printf "%s" "${BASH_REMATCH[1]}
 \`\`\`output
 $( cat ./.github/output )
 \`\`\`${BASH_REMATCH[3]}" > ./README.md
-if [[ "${GITHUB_EVENT_PATH:-}" != "" ]] ; then
-    git add README.md
-    git config user.email cspotcode@gmail.com
-    git commit -m "Update README with script output"
-    git push origin "$( git rev-parse --abbrev-ref HEAD )"
-fi
+git add README.md
+git config user.email cspotcode@gmail.com
+git commit -m "Update README with script output"
+git push origin "$( git rev-parse --abbrev-ref HEAD )"
