@@ -1,10 +1,12 @@
-# Title
+# Load times for lodash vs alternatives
 
-Description
+For CLI tools, load times are more important than dependency download size.  This benchmark compares the load times
+of various ways to `require()` a `_.get()` function or equivalent.
 
 ```bash
 # repro code goes here
 set -euxo pipefail
+yarn install
 
 function test {
     node -e "
@@ -15,10 +17,11 @@ function test {
     " >> "log-$2"
 }
 for i in 0 1 2 3 4 5 6 7 8 9 ; do
-    test lodash lodash
-    test lodash.get lodash.get
-    test lodash/get lodash_slash_get
-    test get-value get-value
+    test lodash 1.lodash
+    test lodash/lodash.min.js 2.lodash.min.js
+    test lodash.get 3.lodash.get
+    test lodash/get 4.lodash_slash_get
+    test get-value 5.get-value
 done
 
 node ./aggregate.js
