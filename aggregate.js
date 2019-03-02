@@ -5,7 +5,7 @@ function pad(val) {
     return _.pad(val, 15);
 }
 function row(vals) {
-    return vals.map(val => _.pad(val, 10)).join(' | ');
+    return vals.map(val => pad(val)).join(' | ');
 }
 
 const results = fs.readdirSync('.').filter(v => v.match(/^log-/)).map(v => {
