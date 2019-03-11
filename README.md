@@ -1,12 +1,15 @@
 # Title
 
-Description
+Mocha load-time benchmark
 
 ```bash
 # repro code goes here
 set -euxo pipefail
 
-echo Hello world!
+npm install mocha
+time node -r mocha
+time node ./node_modules/bin/mocha
+time node ./node_modules/bin/mocha --version
 ```
 
 *The script above is extracted, executed by bash in docker, and stdout is inserted below.  All the magic happens in ./.github/run.sh*
