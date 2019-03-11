@@ -7,11 +7,16 @@ re='```bash
 ```'
 [[ "$readme" =~ $re ]]
 printf "%s" "${BASH_REMATCH[1]}" > ./.github/extracted
+chmod +x ./.github/extracted
+
+echo "EXTRACTED SCRIPT:"
+printf "%s\n" "$(cat ./.github/extracted)"
+echo "-----------------"
 
 token="${GITHUB_TOKEN:-}"
 GITHUB_TOKEN=''
-set -x +e
-. ./.github/extracted | tee ./.github/output
+set +e
+./.github/extracted | tee ./.github/output
 set -e
 
 GITHUB_TOKEN="$token"
