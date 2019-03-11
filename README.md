@@ -7,11 +7,9 @@ Mocha load-time benchmark
 set -euxo pipefail
 
 npm install mocha
-time node -r mocha
-time node ./node_modules/mocha/bin/mocha
-time node ./node_modules/mocha/bin/mocha --version
-
-
+time node -r mocha || true
+time node ./node_modules/mocha/bin/mocha || true
+time node ./node_modules/mocha/bin/mocha --version || true
 ```
 
 *The script above is extracted, executed by bash in docker, and stdout is inserted below.  All the magic happens in ./.github/run.sh*
