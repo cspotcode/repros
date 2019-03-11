@@ -14,10 +14,10 @@ time node ./node_modules/mocha/bin/mocha --version
 
 *The script above is extracted, executed by bash in docker, and stdout is inserted below.  All the magic happens in ./.github/run.sh*
 
-[Logs](https://github.com/cspotcode/repros/runs/75758639)
+[Logs](https://github.com/cspotcode/repros/runs/75774392)
 
 ```output
 + mocha@6.0.2
-added 230 packages from 589 contributors and audited 1137 packages in 9.571s
+added 230 packages from 589 contributors and audited 1137 packages in 9.382s
 found 0 vulnerabilities
 ```
