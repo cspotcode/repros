@@ -21,6 +21,10 @@ du -s -h ./mocha-proposed/node_modules
   time node ./mocha-proposed/node_modules/.bin/mocha || true
   time node ./mocha/node_modules/.bin/mocha --version || true
   time node ./mocha-proposed/node_modules/.bin/mocha --version || true
+  time node ./mocha/node_modules/.bin/mocha || true
+  time node ./mocha-proposed/node_modules/.bin/mocha || true
+  time node ./mocha/node_modules/.bin/mocha --version || true
+  time node ./mocha-proposed/node_modules/.bin/mocha --version || true
 ) >&1
 ```
 
