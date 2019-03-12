@@ -5,6 +5,7 @@ mocha startup performance and node_modules install size using find-up vs findup-
 ./mocha-proposed uses mocha from my pull-request branch. 
 
 ```bash
+#!/usr/bin/env bash
 # repro code goes here
 set -euxo pipefail
 
@@ -30,6 +31,7 @@ du -s ./mocha-proposed/node_modules
   time node ./mocha/node_modules/.bin/mocha --version || true
   time node ./mocha-proposed/node_modules/.bin/mocha --version || true
 ) 2>&1
+
 ```
 
 *The script above is extracted, executed by bash in docker, and stdout is inserted below.  All the magic happens in ./.github/run.sh*
