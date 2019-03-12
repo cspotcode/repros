@@ -2,7 +2,7 @@
 
 mocha startup performance and node_modules install size using find-up vs findup-sync.
 
-./mocha-proposed uses mocha from my pull-request branch.
+./mocha-proposed uses mocha from my pull-request branch. 
 
 ```bash
 # repro code goes here
