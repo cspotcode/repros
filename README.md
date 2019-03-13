@@ -1,4 +1,4 @@
-# mocha find-up vs findup-sync
+# mocha find-up vs findup-sync 
 
 mocha startup performance and node_modules install size using find-up vs findup-sync.
 
