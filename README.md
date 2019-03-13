@@ -12,7 +12,7 @@ set -euxo pipefail
 mkdir mocha
 mkdir mocha-proposed
 pushd mocha
-npm install mocha
+npm install git://github.com/mochajs/mocha.git#master
 popd
 pushd mocha-proposed
 npm install git://github.com/cspotcode/mocha.git#feature/json-instead-of-yargs-unparser
