@@ -15,7 +15,7 @@ pushd mocha
 npm install mocha
 popd
 pushd mocha-proposed
-npm install git://github.com/cspotcode/mocha.git#find-up-as-findupSync-replacement
+npm install git://github.com/cspotcode/mocha.git#feature/json-instead-of-yargs-unparser
 popd
 du -s -h ./mocha/node_modules
 du -s ./mocha/node_modules
