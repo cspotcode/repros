@@ -2,24 +2,19 @@
 set -euo pipefail
 
 readme=$(cat README.md)
-re='```bash
-(.*?)
-```'
-[[ "$readme" =~ $re ]]
-printf "%s" "${BASH_REMATCH[1]}" > ./.github/extracted
-chmod +x ./.github/extracted
-
-echo "EXTRACTED SCRIPT:"
-printf "%s\n" "$(cat ./.github/extracted)"
-echo "-----------------"
+./.github/regexp.js "$readme" '```bash\n([\s\S]*?)\n```' '' 1 > ./.github/extracted
 
 token="${GITHUB_TOKEN:-}"
 GITHUB_TOKEN=''
-set +e
-./.github/extracted | tee ./.github/output
+set -x +e
+bash ./.github/extracted 2>&1 | tee ./.github/output
 set -e
 
 GITHUB_TOKEN="$token"
+
+if [[ "${GITHUB_EVENT_PATH:-}" = "" ]] ; then
+    exit
+fi
 
 # Get ID of this Actions run
 checkRunId=$(
