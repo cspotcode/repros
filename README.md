@@ -1,8 +1,10 @@
-# mocha find-up vs findup-sync 
+# mocha remove yargs-unparser by passing JSON to _mocha
 
-mocha startup performance and node_modules install size using find-up vs findup-sync.
+mocha startup performance and node_modules install size by replacing yargs-unparser with JSON-passing.
 
-./mocha-proposed uses mocha from my pull-request branch. 
+./mocha is installing from mochajs/mocha#master
+
+./mocha-proposed uses mocha from my pull-request branch.
 
 ```bash
 #!/usr/bin/env bash
