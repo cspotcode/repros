@@ -37,73 +37,75 @@ du -s ./mocha-proposed/node_modules
 
 *The script above is extracted, executed by bash in docker, and stdout is inserted below.  All the magic happens in ./.github/run.sh*
 
-[Logs](https://github.com/cspotcode/repros/runs/77840067)
+[Logs](https://github.com/cspotcode/repros/runs/77909075)
 
 ```output
 /github/workspace/mocha /github/workspace
 + mocha@6.0.2
-added 115 packages from 497 contributors in 18.184s
+added 115 packages from 497 contributors and audited 223 packages in 8.146s
+found 0 vulnerabilities
+
 /github/workspace
 /github/workspace/mocha-proposed /github/workspace
 + mocha@6.0.2
-added 107 packages from 493 contributors and audited 152 packages in 5.001s
+added 107 packages from 493 contributors and audited 152 packages in 3.862s
 found 0 vulnerabilities
 
 /github/workspace
 12M	./mocha/node_modules
 12284	./mocha/node_modules
 6.6M	./mocha-proposed/node_modules
-6756	./mocha-proposed/node_modules
+6752	./mocha-proposed/node_modules
 + node ./mocha/node_modules/.bin/mocha
 [31mError: No test files found: "test"[39m
 
-real	0m0.592s
-user	0m0.496s
-sys	0m0.077s
+real	0m0.537s
+user	0m0.440s
+sys	0m0.091s
 + true
 + node ./mocha-proposed/node_modules/.bin/mocha
 [31mError: No test files found: "test"[39m
 
-real	0m0.435s
-user	0m0.372s
-sys	0m0.057s
+real	0m0.411s
+user	0m0.332s
+sys	0m0.073s
 + true
 + node ./mocha/node_modules/.bin/mocha --version
 6.0.2
 
-real	0m0.558s
-user	0m0.462s
-sys	0m0.083s
+real	0m0.528s
+user	0m0.455s
+sys	0m0.063s
 + node ./mocha-proposed/node_modules/.bin/mocha --version
 6.0.2
 
-real	0m0.246s
+real	0m0.226s
+user	0m0.197s
+sys	0m0.024s
++ node ./mocha/node_modules/.bin/mocha
+[31mError: No test files found: "test"[39m
+
+real	0m0.542s
+user	0m0.460s
+sys	0m0.067s
++ true
++ node ./mocha-proposed/node_modules/.bin/mocha
+[31mError: No test files found: "test"[39m
+
+real	0m0.407s
+user	0m0.353s
+sys	0m0.049s
++ true
++ node ./mocha/node_modules/.bin/mocha --version
+6.0.2
+
+real	0m0.533s
+user	0m0.448s
+sys	0m0.075s
++ node ./mocha-proposed/node_modules/.bin/mocha --version
+6.0.2
+
+real	0m0.233s
 user	0m0.206s
-sys	0m0.037s
-+ node ./mocha/node_modules/.bin/mocha
-[31mError: No test files found: "test"[39m
-
-real	0m0.607s
-user	0m0.526s
-sys	0m0.064s
-+ true
-+ node ./mocha-proposed/node_modules/.bin/mocha
-[31mError: No test files found: "test"[39m
-
-real	0m0.465s
-user	0m0.419s
-sys	0m0.040s
-+ true
-+ node ./mocha/node_modules/.bin/mocha --version
-6.0.2
-
-real	0m0.603s
-user	0m0.516s
-sys	0m0.078s
-+ node ./mocha-proposed/node_modules/.bin/mocha --version
-6.0.2
-
-real	0m0.262s
-user	0m0.233s
 sys	0m0.024s
 ```
