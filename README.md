@@ -37,18 +37,18 @@ du -s ./mocha-proposed/node_modules
 
 *The script above is extracted, executed by bash in docker, and stdout is inserted below.  All the magic happens in ./.github/run.sh*
 
-[Logs](https://github.com/cspotcode/repros/runs/77909075)
+[Logs](https://github.com/cspotcode/repros/runs/77929050)
 
 ```output
 /github/workspace/mocha /github/workspace
 + mocha@6.0.2
-added 115 packages from 497 contributors and audited 223 packages in 8.146s
+added 115 packages from 497 contributors and audited 223 packages in 7.985s
 found 0 vulnerabilities
 
 /github/workspace
 /github/workspace/mocha-proposed /github/workspace
 + mocha@6.0.2
-added 107 packages from 493 contributors and audited 152 packages in 3.862s
+added 107 packages from 493 contributors and audited 152 packages in 4.026s
 found 0 vulnerabilities
 
 /github/workspace
@@ -59,53 +59,53 @@ found 0 vulnerabilities
 + node ./mocha/node_modules/.bin/mocha
 [31mError: No test files found: "test"[39m
 
-real	0m0.537s
-user	0m0.440s
-sys	0m0.091s
+real	0m0.588s
+user	0m0.493s
+sys	0m0.080s
 + true
 + node ./mocha-proposed/node_modules/.bin/mocha
 [31mError: No test files found: "test"[39m
 
-real	0m0.411s
-user	0m0.332s
-sys	0m0.073s
+real	0m0.432s
+user	0m0.365s
+sys	0m0.061s
 + true
 + node ./mocha/node_modules/.bin/mocha --version
 6.0.2
 
-real	0m0.528s
-user	0m0.455s
-sys	0m0.063s
+real	0m0.568s
+user	0m0.487s
+sys	0m0.072s
 + node ./mocha-proposed/node_modules/.bin/mocha --version
 6.0.2
 
-real	0m0.226s
-user	0m0.197s
-sys	0m0.024s
+real	0m0.249s
+user	0m0.204s
+sys	0m0.040s
 + node ./mocha/node_modules/.bin/mocha
 [31mError: No test files found: "test"[39m
 
-real	0m0.542s
-user	0m0.460s
-sys	0m0.067s
+real	0m0.587s
+user	0m0.524s
+sys	0m0.048s
 + true
 + node ./mocha-proposed/node_modules/.bin/mocha
 [31mError: No test files found: "test"[39m
 
-real	0m0.407s
-user	0m0.353s
-sys	0m0.049s
+real	0m0.440s
+user	0m0.397s
+sys	0m0.037s
 + true
 + node ./mocha/node_modules/.bin/mocha --version
 6.0.2
 
-real	0m0.533s
-user	0m0.448s
-sys	0m0.075s
+real	0m0.567s
+user	0m0.464s
+sys	0m0.095s
 + node ./mocha-proposed/node_modules/.bin/mocha --version
 6.0.2
 
-real	0m0.233s
-user	0m0.206s
-sys	0m0.024s
+real	0m0.241s
+user	0m0.197s
+sys	0m0.040s
 ```
