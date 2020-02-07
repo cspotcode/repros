@@ -32,15 +32,12 @@ checkRunId=$(
 node -e '
     const readmeInput = process.argv[1];
     const log = process.argv[2];
-    console.error(process.argv);
     const readmeOutput = readmeInput.replace(
         /(\[Logs\][\s\S]*?```output\n)[\s\S]*?(\n```)/,
         (all, logPrefix, logSuffix) => `${ logPrefix }${ log }${logSuffix}`
     );
-    console.error(readmeOutput);
     console.log(readmeOutput);
 ' "$readme" "$(cat ./.github/output)" > ./README.md
-exit
 git add README.md
 git config user.email cspotcode@gmail.com
 git commit -m "Update README with script output"
