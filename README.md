@@ -1,12 +1,14 @@
-# Title
+# yarnPath is absolute, not portable
 
-Description
+`yarn set version berry` sets an absolute path to yarn, not a relative one.  I think this is a bug since everything is saved locally, so the rc file is meant to be portable.
 
 ```bash
-# repro code goes here
 set -euxo pipefail
 
-echo Hello world!
+export FORCE_COLOR=0
+curl -o- -L https://yarnpkg.com/install.sh | bash
+yarn set version berry
+cat ./.yarnrc.yml
 ```
 
 *The script above is extracted, executed by bash in docker, and stdout is inserted below.  All the magic happens in ./.github/run.sh*
