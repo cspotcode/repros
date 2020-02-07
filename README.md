@@ -5,9 +5,13 @@ When using the patch: protocol to add new dependencies to a package.json, yarn 2
 ```bash
 set -euxo pipefail
 
+export FORCE_COLOR=0
 curl -o- -L https://yarnpkg.com/install.sh | bash
 yarn set version berry
 yarn install
+echo ''
+echo '------------'
+echo ''
 yarn why sanctuary-def
 ```
 
