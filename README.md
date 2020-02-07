@@ -2,6 +2,8 @@
 
 When using the patch: protocol to add new dependencies to a package.json, yarn 2 does not install those new dependencies.
 
+This example patches `gh` to declare a direct dependency on `sanctuary-def`.  However, `yarn why` does not show this direct dependency, and `yarn run gh` fails because this direct dependency is not reflected in yarn's dependency graph.
+
 ```bash
 set -euxo pipefail
 
@@ -26,24 +28,37 @@ yarn why sanctuary-def
 ++ curl -o- -L https://yarnpkg.com/install.sh
   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
                                  Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100    54  100    54    0     0    805      0 --:--:-- --:--:-- --:--:--   818
-100  7152  100  7152    0     0  48000      0 --:--:-- --:--:-- --:--:-- 48000
+
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100    54  100    54    0     0    805      0 --:--:-- --:--:-- --:--:--   818
+
+100  7152  100  7152    0     0  48000      0 --:--:-- --:--:-- --:--:-- 48000
 [37mInstalling Yarn![0m
 [36m> Downloading tarball...[0m
 
 [1/2]: https://yarnpkg.com/latest.tar.gz --> /tmp/yarn.tar.gz.2hK4f8OKP9
   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
                                  Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100    57  100    57    0     0    339      0 --:--:-- --:--:-- --:--:--   337
-100    93  100    93    0     0    384      0 --:--:-- --:--:-- --:--:--   384
-100   609    0   609    0     0   1594      0 --:--:-- --:--:-- --:--:--  1594
-100 1214k  100 1214k    0     0  2322k      0 --:--:-- --:--:-- --:--:-- 2322k
+
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100    57  100    57    0     0    339      0 --:--:-- --:--:-- --:--:--   337
+
+100    93  100    93    0     0    384      0 --:--:-- --:--:-- --:--:--   384
+
+100   609    0   609    0     0   1594      0 --:--:-- --:--:-- --:--:--  1594
+
+100 1214k  100 1214k    0     0  2322k      0 --:--:-- --:--:-- --:--:-- 2322k
 
 [2/2]: https://yarnpkg.com/latest.tar.gz.asc --> /tmp/yarn.tar.gz.2hK4f8OKP9.asc
-100    61  100    61    0     0   5545      0 --:--:-- --:--:-- --:--:--  5545
-100    97  100    97    0     0   4217      0 --:--:-- --:--:-- --:--:--  4217
-100   613    0   613    0     0   4170      0 --:--:-- --:--:-- --:--:--  4170
-100  1028  100  1028    0     0   6230      0 --:--:-- --:--:-- --:--:--  6230
+
+100    61  100    61    0     0   5545      0 --:--:-- --:--:-- --:--:--  5545
+
+100    97  100    97    0     0   4217      0 --:--:-- --:--:-- --:--:--  4217
+
+100   613    0   613    0     0   4170      0 --:--:-- --:--:-- --:--:--  4170
+
+100  1028  100  1028    0     0   6230      0 --:--:-- --:--:-- --:--:--  6230
 [33m> WARNING: GPG is not installed, integrity can not be verified![0m
 [36m> Extracting to ~/.yarn...[0m
 [36m> Adding to $PATH...[0m
