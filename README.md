@@ -6,6 +6,7 @@ When using the patch: protocol to add new dependencies to a package.json, yarn 2
 set -euxo pipefail
 
 curl -o- -L https://yarnpkg.com/install.sh | bash
+yarn set version berry
 yarn install
 yarn why sanctuary-def
 ```
