@@ -1,0 +1,15 @@
+name: Run main
+on: [push]
+jobs:
+  run:
+    name: Run
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2.0.0
+      - name: Run
+        uses: actions/npm@59b64a598378f31e49cb76f27d6f3312b582f680
+        with:
+          entrypoint: /bin/bash
+          args: "-l -c \"echo $'------------\n------------\n\n\n' && /bin/bash ./.github/run.sh\""
+          secrets: ["GITHUB_TOKEN"]
