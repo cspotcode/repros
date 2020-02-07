@@ -1,0 +1,11 @@
+{
+  "name": "yarn-2-sandbox",
+  "dependencies": {
+    "gh": "patch:gh@2.8.5#./npm-gh.patch"
+  },
+  "dependenciesMeta": {
+    "gh": {
+      "unplugged": true
+    }
+  }
+}
