@@ -20,41 +20,28 @@ cat ./.yarnrc.yml
 ```output
 ++ export FORCE_COLOR=0
 ++ FORCE_COLOR=0
-++ curl -o- -L https://yarnpkg.com/install.sh
 ++ bash
+++ curl -o- -L https://yarnpkg.com/install.sh
   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
                                  Dload  Upload   Total   Spent    Left  Speed
-
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
-100    54  100    54    0     0    900      0 --:--:-- --:--:-- --:--:--   915
-
-100  7152  100  7152    0     0  49666      0 --:--:-- --:--:-- --:--:-- 49666
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100    54  100    54    0     0    915      0 --:--:-- --:--:-- --:--:--   915
+100  7152  100  7152    0     0  50366      0 --:--:-- --:--:-- --:--:-- 50366
 [37mInstalling Yarn![0m
 [36m> Downloading tarball...[0m
 
-[1/2]: https://yarnpkg.com/latest.tar.gz --> /tmp/yarn.tar.gz.bz0crupwRB
+[1/2]: https://yarnpkg.com/latest.tar.gz --> /tmp/yarn.tar.gz.Ign0jlITNz
   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
                                  Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100    57  100    57    0     0    513      0 --:--:-- --:--:-- --:--:--   513
+100    93  100    93    0     0    505      0 --:--:-- --:--:-- --:--:--   505
+100   609    0   609    0     0   1964      0 --:--:-- --:--:-- --:--:--  1964
+100 1214k  100 1214k    0     0  3123k      0 --:--:-- --:--:-- --:--:-- 3123k
 
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
-100    57  100    57    0     0   1000      0 --:--:-- --:--:-- --:--:--  1000
-
-100    93  100    93    0     0    709      0 --:--:-- --:--:-- --:--:--   709
-
-100   609    0   609    0     0   2064      0 --:--:-- --:--:-- --:--:--  2064
-
-100 1214k  100 1214k    0     0  2489k      0 --:--:-- --:--:-- --:--:-- 2489k
-
-[2/2]: https://yarnpkg.com/latest.tar.gz.asc --> /tmp/yarn.tar.gz.bz0crupwRB.asc
-
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
-100    61  100    61    0     0   5545      0 --:--:-- --:--:-- --:--:-- 61000
-
-100    97  100    97    0     0   4217      0 --:--:-- --:--:-- --:--:--  4217
-
-100   613    0   613    0     0   4474      0 --:--:-- --:--:-- --:--:--  4474
-
-100  1028  100  1028    0     0   2447      0 --:--:-- --:--:-- --:--:--  2447
+[2/2]: https://yarnpkg.com/latest.tar.gz.asc --> /tmp/yarn.tar.gz.Ign0jlITNz.asc
+100    61  100    61    0     0   4692      0 --:--:-- --:--:-- --:--:--  4692
+100    97  100    97    0     0   4041      0 --:--:-- --:--:-- --:--:--  4041
+100   613    0   613    0     0   4316      0 --:--:-- --:--:-- --:--:--  4316
+100  1028  100  1028    0     0   6306      0 --:--:-- --:--:-- --:--:--  6306
 [33m> WARNING: GPG is not installed, integrity can not be verified![0m
 [36m> Extracting to ~/.yarn...[0m
 [36m> Adding to $PATH...[0m
@@ -71,6 +58,10 @@ Downloading https://github.com/yarnpkg/berry/raw/master/packages/berry-cli/bin/b
 Saving it into /github/workspace/.yarn/releases/yarn-berry.js...
 Updating /github/workspace/.yarnrc.yml...
 Done!
+++ node --version
+v12.15.0
+++ yarn --version
+2.0.0-rc.28
 ++ cat ./.yarnrc.yml
 yarnPath: "/github/workspace/.yarn/releases/yarn-berry.js"
 ```
