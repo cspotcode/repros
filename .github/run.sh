@@ -17,7 +17,7 @@ echo "-----------------"
 token="${GITHUB_TOKEN:-}"
 GITHUB_TOKEN=''
 set +e
-./.github/extracted | tee ./.github/output
+./.github/extracted 2>&1 | tee ./.github/output
 set -e
 
 GITHUB_TOKEN="$token"
