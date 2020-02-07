@@ -30,37 +30,24 @@ yarn why sanctuary-def
 ++ curl -o- -L https://yarnpkg.com/install.sh
   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
                                  Dload  Upload   Total   Spent    Left  Speed
-
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
-100    54  100    54    0     0    870      0 --:--:-- --:--:-- --:--:--   870
-
-100  7152  100  7152    0     0  48653      0 --:--:-- --:--:-- --:--:-- 48653
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100    54  100    54    0     0    915      0 --:--:-- --:--:-- --:--:--   915
+  0     0    0     0    0     0      0      0 --:--:--  0:00:01 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:02 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:03 --:--:--     0100  7152  100  7152    0     0   1971      0  0:00:03  0:00:03 --:--:--  3476
 [37mInstalling Yarn![0m
 [36m> Downloading tarball...[0m
 
-[1/2]: https://yarnpkg.com/latest.tar.gz --> /tmp/yarn.tar.gz.92XL72lKbq
+[1/2]: https://yarnpkg.com/latest.tar.gz --> /tmp/yarn.tar.gz.LgOXiGc9jv
   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
                                  Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100    57  100    57    0     0    982      0 --:--:-- --:--:-- --:--:--   982
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100    93  100    93    0     0    699      0 --:--:-- --:--:-- --:--:--  7750
+100   609    0   609    0     0   2238      0 --:--:-- --:--:-- --:--:--  2238
+100 1214k  100 1214k    0     0  2934k      0 --:--:-- --:--:-- --:--:-- 2934k
 
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
-100    57  100    57    0     0   1017      0 --:--:-- --:--:-- --:--:--  1017
-
-100    93  100    93    0     0    720      0 --:--:-- --:--:-- --:--:--   720
-
-100   609    0   609    0     0   1240      0 --:--:-- --:--:-- --:--:--  1240
-
-100 1214k  100 1214k    0     0  1866k      0 --:--:-- --:--:-- --:--:-- 1866k
-
-[2/2]: https://yarnpkg.com/latest.tar.gz.asc --> /tmp/yarn.tar.gz.92XL72lKbq.asc
-
-100    61  100    61    0     0   4692      0 --:--:-- --:--:-- --:--:--  4692
-
-100    97  100    97    0     0   4041      0 --:--:-- --:--:-- --:--:--  4041
-
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
-100   613    0   613    0     0   4789      0 --:--:-- --:--:-- --:--:--  598k
-
-100  1028  100  1028    0     0   7089      0 --:--:-- --:--:-- --:--:--  7089
+[2/2]: https://yarnpkg.com/latest.tar.gz.asc --> /tmp/yarn.tar.gz.LgOXiGc9jv.asc
+100    61  100    61    0     0   5083      0 --:--:-- --:--:-- --:--:--  5083
+100    97  100    97    0     0   4217      0 --:--:-- --:--:-- --:--:--  4217
+100   613    0   613    0     0   4378      0 --:--:-- --:--:-- --:--:--  4378
+100  1028  100  1028    0     0   6385      0 --:--:-- --:--:-- --:--:--  6385
 [33m> WARNING: GPG is not installed, integrity can not be verified![0m
 [36m> Extracting to ~/.yarn...[0m
 [36m> Adding to $PATH...[0m
@@ -75,17 +62,21 @@ export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 [94m➤[39m YN0000: Found matching release with [38;5;147mrc[39m
 [94m➤[39m YN0000: Downloading [32mhttps://github.com/yarnpkg/berry/raw/master/packages/yarnpkg-cli/bin/yarn.js[39m
 [94m➤[39m YN0000: Saving the new release in [35m.yarn/releases/yarn-rc.js[39m
-[94m➤[39m YN0000: Done in 0.37s
+[94m➤[39m YN0000: Done in 0.7s
+++ node --version
+v12.15.0
+++ yarn --version
+2.0.0-rc.28
 ++ yarn install
 [94m➤[39m [90mYN0000[39m: ┌ Resolution step
 [93m➤[39m YN0002: │ [38;5;173mgh[39m[38;5;111m@[39m[38;5;111mpatch:gh@npm%3A2.8.5#./npm-gh.patch::version=2.8.5&hash=0ca59f&locator=yarn-2-sandbox%40workspace%3A.[39m doesn't provide [38;5;173msanctuary-def[39m[38;5;37m@[39m[38;5;37m>=0.20.0 <0.21.0[39m requested by [38;5;173mfluture-sanctuary-types[39m[38;5;111m@[39m[38;5;111mnpm:4.1.1[39m
 [93m➤[39m YN0060: │ [38;5;173mgh[39m[38;5;111m@[39m[38;5;111mpatch:gh@npm%3A2.8.5#./npm-gh.patch::version=2.8.5&hash=0ca59f&locator=yarn-2-sandbox%40workspace%3A.[39m provides [38;5;173mmarked[39m[38;5;111m@[39m[38;5;111mnpm:0.7.0[39m with version 0.7.0 which doesn't satisfy [38;5;37m^0.4.0 || ^0.5.0 || ^0.6.0[39m requested by [38;5;173mmarked-terminal[39m[38;5;111m@[39m[38;5;111mnpm:3.2.0[39m
-[94m➤[39m [90mYN0000[39m: └ Completed in 0.11s
+[94m➤[39m [90mYN0000[39m: └ Completed in 0.08s
 [94m➤[39m [90mYN0000[39m: ┌ Fetch step
-[94m➤[39m YN0013: │ [38;5;166m@octokit/[39m[38;5;173mrequest-error[39m[38;5;111m@[39m[38;5;111mnpm:1.2.1[39m can't be found in the cache and will be fetched from the remote registry
 [94m➤[39m YN0013: │ [38;5;166m@octokit/[39m[38;5;173mrequest[39m[38;5;111m@[39m[38;5;111mnpm:4.1.1[39m can't be found in the cache and will be fetched from the remote registry
-[94m➤[39m YN0013: │ [38;5;166m@octokit/[39m[38;5;173mendpoint[39m[38;5;111m@[39m[38;5;111mnpm:5.5.2[39m can't be found in the cache and will be fetched from the remote registry
 [94m➤[39m YN0013: │ [38;5;166m@octokit/[39m[38;5;173mplugin-throttling[39m[38;5;111m@[39m[38;5;111mnpm:2.7.1[39m can't be found in the cache and will be fetched from the remote registry
+[94m➤[39m YN0013: │ [38;5;166m@octokit/[39m[38;5;173mendpoint[39m[38;5;111m@[39m[38;5;111mnpm:5.5.2[39m can't be found in the cache and will be fetched from the remote registry
+[94m➤[39m YN0013: │ [38;5;166m@octokit/[39m[38;5;173mrequest-error[39m[38;5;111m@[39m[38;5;111mnpm:1.2.1[39m can't be found in the cache and will be fetched from the remote registry
 [94m➤[39m YN0013: │ [38;5;166m@octokit/[39m[38;5;173mrest[39m[38;5;111m@[39m[38;5;111mnpm:16.25.6[39m can't be found in the cache and will be fetched from the remote registry
 [94m➤[39m YN0013: │ [38;5;166m@octokit/[39m[38;5;173mtypes[39m[38;5;111m@[39m[38;5;111mnpm:2.1.1[39m can't be found in the cache and will be fetched from the remote registry
 [94m➤[39m YN0013: │ [38;5;166m@sindresorhus/[39m[38;5;173mis[39m[38;5;111m@[39m[38;5;111mnpm:0.14.0[39m can't be found in the cache and will be fetched from the remote registry
@@ -153,8 +144,8 @@ export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 [94m➤[39m YN0013: │ [38;5;173mdebug[39m[38;5;111m@[39m[38;5;111mnpm:4.1.1[39m can't be found in the cache and will be fetched from the remote registry
 [94m➤[39m YN0013: │ [38;5;173mdecompress-response[39m[38;5;111m@[39m[38;5;111mnpm:3.3.0[39m can't be found in the cache and will be fetched from the remote registry
 [94m➤[39m YN0013: │ [38;5;173mdeep-eql[39m[38;5;111m@[39m[38;5;111mnpm:3.0.1[39m can't be found in the cache and will be fetched from the remote registry
-[94m➤[39m YN0013: │ [38;5;173mdeep-equal[39m[38;5;111m@[39m[38;5;111mnpm:1.1.1[39m can't be found in the cache and will be fetched from the remote registry
 [94m➤[39m YN0013: │ [38;5;173mdeep-extend[39m[38;5;111m@[39m[38;5;111mnpm:0.6.0[39m can't be found in the cache and will be fetched from the remote registry
+[94m➤[39m YN0013: │ [38;5;173mdeep-equal[39m[38;5;111m@[39m[38;5;111mnpm:1.1.1[39m can't be found in the cache and will be fetched from the remote registry
 [94m➤[39m YN0013: │ [38;5;173mdefaults[39m[38;5;111m@[39m[38;5;111mnpm:1.0.3[39m can't be found in the cache and will be fetched from the remote registry
 [94m➤[39m YN0013: │ [38;5;173mdefer-to-connect[39m[38;5;111m@[39m[38;5;111mnpm:1.1.3[39m can't be found in the cache and will be fetched from the remote registry
 [94m➤[39m YN0013: │ [38;5;173mdefine-properties[39m[38;5;111m@[39m[38;5;111mnpm:1.1.3[39m can't be found in the cache and will be fetched from the remote registry
@@ -385,10 +376,10 @@ export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 [94m➤[39m YN0013: │ [38;5;173mwrappy[39m[38;5;111m@[39m[38;5;111mnpm:1.0.2[39m can't be found in the cache and will be fetched from the remote registry
 [94m➤[39m YN0013: │ [38;5;173mwrite-file-atomic[39m[38;5;111m@[39m[38;5;111mnpm:3.0.1[39m can't be found in the cache and will be fetched from the remote registry
 [94m➤[39m YN0013: │ [38;5;173mxdg-basedir[39m[38;5;111m@[39m[38;5;111mnpm:4.0.0[39m can't be found in the cache and will be fetched from the remote registry
-[94m➤[39m [90mYN0000[39m: └ Completed in 9.64s
+[94m➤[39m [90mYN0000[39m: └ Completed in 9.17s
 [94m➤[39m [90mYN0000[39m: ┌ Link step
-[94m➤[39m [90mYN0000[39m: └ Completed in 0.61s
-[93m➤[39m YN0000: Done with warnings in 10.37s
+[94m➤[39m [90mYN0000[39m: └ Completed in 0.56s
+[93m➤[39m YN0000: Done with warnings in 9.82s
 ++ echo ''
 
 ++ echo ------------
