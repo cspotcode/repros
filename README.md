@@ -14,5 +14,6 @@ echo Hello world!
 [Logs](https://github.com/cspotcode/repros/runs/76710127)
 
 ```output
+++ echo Hello 'world!'
 Hello world!
 ```
