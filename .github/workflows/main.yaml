@@ -1,4 +1,4 @@
-name: Run main
+name: Run Reproduction
 on: [push]
 jobs:
   run:
