@@ -1,0 +1,16 @@
+name: Run Reproduction
+on: [push]
+jobs:
+  run:
+    name: Run
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2.0.0
+      - name: Run
+        uses: cspotcode/repros/.github/runner@master
+        with:
+          entrypoint: /bin/bash
+          args: "-l -c \"echo $'------------\n------------\n\n\n' && /bin/bash ./.github/run.sh\""
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
