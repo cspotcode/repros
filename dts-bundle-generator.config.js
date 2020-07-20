@@ -12,10 +12,10 @@ const config = module.exports = {
             ],
             // imported libraries
             importedLibraries: [
-                "events"
             ],
             // inlined (bundled) libraries
             inlinedLibraries: [
+                "ora"
             ],
         }
     }]

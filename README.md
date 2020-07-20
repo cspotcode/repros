@@ -1,7 +1,5 @@
 # dts-bundle-generator repro
 
-When I try to `import {EventEmitter} from 'events';`, the necessary `/// <reference types="node" />` seems to be removed.  Am I doing something wrong?
-
 Input is `src/index.d.ts`  
 Output is `dist/index.d.ts`
 
