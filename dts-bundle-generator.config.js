@@ -8,7 +8,6 @@ const config = module.exports = {
         libraries: {
             // /// <reference-d> libraries
             allowedTypesLibraries: [
-                "node"
             ],
             // imported libraries
             importedLibraries: [
