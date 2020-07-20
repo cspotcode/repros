@@ -1,27 +1,12 @@
 {
   "name": "repros",
   "version": "1.0.0",
-  "description": "Description",
-  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "repro": "dts-bundle-generator --config ./dts-bundle-generator.config.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/cspotcode/repros.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/cspotcode/repros/issues"
-  },
-  "homepage": "https://github.com/cspotcode/repros#readme",
   "dependencies": {
-    "@types/liftoff": "^2.5.0",
     "@types/node": "^14.0.23",
     "dts-bundle-generator": "^5.1.0",
-    "ora": "^4.0.5",
     "typescript": "^3.9.7"
-  },
-  "bundledDependencies": ["@types/liftoff"]
+  }
 }

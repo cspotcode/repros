@@ -1,12 +1,12 @@
-# Title
+# dts-bundle-generator repro
 
-Description
+When I try to `import {EventEmitter} from 'events';`, the necessary `/// <reference types="node" />` seems to be removed.  Am I doing something wrong?
+
+Input is `src/index.d.ts`  
+Output is `dist/index.d.ts`
 
 ```bash
-# repro code goes here
-set -euxo pipefail
-
-echo Hello world!
+npm run repro
 ```
 
 *The script above is extracted, executed by bash in docker, and stdout is inserted below.  All the magic happens in ./.github/run.sh*

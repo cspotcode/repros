@@ -8,20 +8,14 @@ const config = module.exports = {
         libraries: {
             // /// <reference-d> libraries
             allowedTypesLibraries: [
-                'node'
+                "node"
             ],
             // imported libraries
             importedLibraries: [
-                'events',
-                'ora'
+                "events"
             ],
             // inlined (bundled) libraries
             inlinedLibraries: [
-                'inquirer',
-                'node-plop',
-                'interpret',
-                'liftoff',
-                // 'ora'
             ],
         }
     }]
