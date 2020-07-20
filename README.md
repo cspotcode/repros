@@ -6,6 +6,7 @@ Input is `src/index.d.ts`
 Output is `dist/index.d.ts`
 
 ```bash
+npm install
 npm run repro
 ```
 
