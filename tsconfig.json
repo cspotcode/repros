@@ -1,0 +1,8 @@
+{
+    "include": ["src"],
+    "compilerOptions": {
+        "moduleResolution": "node",
+        "rootDir": "src",
+        "outDir": "dist"
+    }
+}
