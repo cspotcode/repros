@@ -9,12 +9,11 @@ const config = module.exports = {
             // /// <reference-d> libraries
             allowedTypesLibraries: [
             ],
-            // imported libraries
+            // // imported libraries
             importedLibraries: [
             ],
-            // inlined (bundled) libraries
+            // // inlined (bundled) libraries
             inlinedLibraries: [
-                "ora"
             ],
         }
     }]
