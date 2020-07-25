@@ -16,6 +16,7 @@ const config = module.exports = {
             ],
             // inlined (bundled) libraries
             inlinedLibraries: [
+                // "ora"
             ],
         }
     }]
