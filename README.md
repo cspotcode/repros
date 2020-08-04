@@ -1,12 +1,18 @@
-# Title
+# Swatinem/rollup-plugin-dts #24
 
-Description
+Repro of https://github.com/Swatinem/rollup-plugin-dts/issues/24
 
 ```bash
 # repro code goes here
 set -euxo pipefail
 
-echo Hello world!
+npm install
+./node_modules/.bin/rollup -c
+
+echo "Emitted declaration:"
+cat ./output.d.ts
+
+tsc -p ./tsconfig.test-output.json
 ```
 
 *The script above is extracted, executed by bash in docker, and stdout is inserted below.  All the magic happens in ./.github/run.sh*

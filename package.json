@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "rollup": "^2.23.0",
+    "rollup-plugin-dts": "^1.4.9",
+    "typescript": "^3.9.7"
+  }
+}
