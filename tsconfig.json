@@ -1,6 +1,8 @@
 {
     "compilerOptions": {
         "strict": true,
-        "moduleResolution": "node"
+        "moduleResolution": "node",
+        "types": [],
+        "noEmit": true
     }
 }

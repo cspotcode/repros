@@ -1,1 +1,1 @@
-import {Yar} from 'yargs/build/lib/yargs';
+import {yargs} from 'yargs/build/lib/yargs';
