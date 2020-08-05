@@ -1,6 +1,4 @@
-# Title
-
-Description
+# Using yargs' bundled type declarations
 
 ```bash
 # repro code goes here
