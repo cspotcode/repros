@@ -1,1 +1,1 @@
-{"version":3,"file":"worker-thread.js","sourceRoot":"","sources":["../src/worker-thread.ts"],"names":[],"mappings":";;AAAA,2CAAqC;AAErC,sDAAsD;AACtD,oBAAQ,CAAC,iBAAiB,CAAC,CAAC"}
+{"version":3,"file":"worker-thread.js","sourceRoot":"","sources":["../src/worker-thread.ts"],"names":[],"mappings":";;AAAA,2CAAqC;AAErC,qEAAqE;AACrE,OAAO,CAAC,GAAG,CAAC,EAAC,oBAAoB,EAAE,OAAO,CAAC,QAAQ,EAAC,CAAC,CAAC;AACtD,oBAAQ,CAAC,iBAAiB,CAAC,CAAC"}
