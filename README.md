@@ -11,6 +11,7 @@ This bug manifests when:
 set -euxo pipefail
 
 npm install
+git checkout -- node_modules/foo
 
 # Buggy behavior
 ./node_modules/.bin/tsc || true

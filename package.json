@@ -4,9 +4,10 @@
         "test": "tsc > tsc.log.txt"
     },
     "dependencies": {
+        "foo": "*",
         "typescript": "^4.1.2"
     },
-    "bundledDependencies": [
+    "bundleDependencies": [
         "foo"
     ]
 }
