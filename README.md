@@ -1,6 +1,10 @@
-# Title
+# tsc resolver bug
 
-Description
+This bug manifests when:
+
+- trying to import from `node_modules`, `foo/bar/baz`
+- `foo/bar/baz.d.ts` and `foo/bar/baz/package.json` both exist
+- there is `typesVersions` mapping in `foo/package.json` to rewrite `foo/bar/baz.d.ts` into `foo/compat/bar/baz.d.ts`
 
 ```bash
 # repro code goes here
@@ -9,9 +13,10 @@ set -euxo pipefail
 # Buggy behavior
 tsc || true
 
+# Removing baz/package.json allows tsc to behave correctly, mapping from ./bar/baz.d.ts to ./compat/bar/baz.d.ts
 rm node_modules/foo/bar/baz/package.json
 
-# Removing baz/package.json allows tsc to behave correctly, mapping from ./bar/baz.d.ts to ./compat/bar/baz.d.ts
+# Now it works
 tsc || true
 ```
 
