@@ -10,14 +10,16 @@ This bug manifests when:
 # repro code goes here
 set -euxo pipefail
 
+npm install
+
 # Buggy behavior
-tsc || true
+./node_modules/.bin/tsc || true
 
 # Removing baz/package.json allows tsc to behave correctly, mapping from ./bar/baz.d.ts to ./compat/bar/baz.d.ts
 rm node_modules/foo/bar/baz/package.json
 
 # Now it works
-tsc || true
+./node_modules/.bin/tsc || true
 ```
 
 *The script above is extracted, executed by bash in docker, and stdout is inserted below.  All the magic happens in ./.github/run.sh*
