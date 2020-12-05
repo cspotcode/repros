@@ -1,0 +1,12 @@
+======== Resolving module 'foo/bar/baz' from '/d/Personal-dev/@formium/tsdx/tsc-resolver-confusion/index.ts'. ========
+Explicitly specified module resolution kind: 'NodeJs'.
+Loading module 'foo/bar/baz' from 'node_modules' folder, target file type 'TypeScript'.
+Found 'package.json' at '/d/Personal-dev/@formium/tsdx/tsc-resolver-confusion/node_modules/foo/bar/baz/package.json'.
+'package.json' does not have a 'typesVersions' field.
+File '/d/Personal-dev/@formium/tsdx/tsc-resolver-confusion/node_modules/foo/bar/baz.ts' does not exist.
+File '/d/Personal-dev/@formium/tsdx/tsc-resolver-confusion/node_modules/foo/bar/baz.tsx' does not exist.
+File '/d/Personal-dev/@formium/tsdx/tsc-resolver-confusion/node_modules/foo/bar/baz.d.ts' exist - use it as a name resolution result.
+Resolving real path for '/d/Personal-dev/@formium/tsdx/tsc-resolver-confusion/node_modules/foo/bar/baz.d.ts', result '/d/Personal-dev/@formium/tsdx/tsc-resolver-confusion/node_modules/foo/bar/baz.d.ts'.
+======== Module name 'foo/bar/baz' was successfully resolved to '/d/Personal-dev/@formium/tsdx/tsc-resolver-confusion/node_modules/foo/bar/baz.d.ts'. ========
+node_modules/foo/bar/baz.d.ts(1,9): error TS1005: ';' expected.
+node_modules/foo/bar/baz.d.ts(1,16): error TS1005: ';' expected.

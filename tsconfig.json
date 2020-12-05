@@ -1,0 +1,9 @@
+{
+    "compilerOptions": {
+        "noEmit": true,
+        "types": [],
+        "lib": ["ES5"],
+        "moduleResolution": "node",
+        "traceResolution": true
+    }
+}

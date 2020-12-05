@@ -1,0 +1,12 @@
+{
+    "name": "tsc-resolver-confusion",
+    "scripts": {
+        "test": "tsc > tsc.log.txt"
+    },
+    "dependencies": {
+        "typescript": "^4.1.2"
+    },
+    "bundledDependencies": [
+        "foo"
+    ]
+}
