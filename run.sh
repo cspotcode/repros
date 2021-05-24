@@ -13,6 +13,11 @@ sudo npm install -g plop*.tgz
 
 cd ..
 
+set +e
+
 which plop
+plop --version
 plop --help
 plop
+# try again, capturing a log
+plop &> log.txt
