@@ -9,7 +9,7 @@ cd plop
 npm install
 npm run build
 npm pack
-npm install -g plop*.tgz
+sudo npm install -g plop*.tgz
 
 cd ..
 
