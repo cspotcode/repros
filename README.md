@@ -6,7 +6,9 @@ Description
 # repro code goes here
 set -euxo pipefail
 
-echo Hello world!
+npm install enhancedmath
+node -p 'require("enhancedmath")' || true
+node -p '(async function() {console.dir(await import("enhancedmath"))})()'
 ```
 
 *The script above is extracted, executed by bash in docker, and stdout is inserted below.  All the magic happens in ./.github/run.sh*
