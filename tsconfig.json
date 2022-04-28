@@ -1,0 +1,12 @@
+{
+    "compilerOptions": {
+        "rootDir": "src",
+        "outDir": "dist",
+
+        // This bug occurs when using the new Node module type and resolver
+        // And when target is <= es2018
+        "module": "NodeNext",
+        "moduleResolution": "NodeNext",
+        "target": "es2018"
+    }
+}
