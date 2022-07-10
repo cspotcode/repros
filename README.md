@@ -14,7 +14,7 @@ node --loader ./loader.mjs ./index.cjs
 # Expected
 
 ```
-❯ node --experimental-import-meta-resolve --loader ./loader-a.mjs --loader ./loader-b.mjs ./index.mjs 
+❯ node --experimental-import-meta-resolve --loader ./loader.mjs ./index.mjs 
 
 ... logging omitted ...
 
@@ -34,7 +34,7 @@ loader resolve(./empty.mjs)
 Note that the loader hook is duplicated within the loader chain after calling `runMain`
 
 ```
-❯ node --experimental-import-meta-resolve --loader ./loader-a.mjs --loader ./loader-b.mjs ./index.mjs 
+❯ node --experimental-import-meta-resolve --loader ./loader.mjs ./index.mjs 
 
 ... logging omitted ...
 
