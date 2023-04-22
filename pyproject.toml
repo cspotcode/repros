@@ -1,0 +1,39 @@
+[tool.ruff]
+# I typically use default ruff formatting rules, which the python standard library
+# does not follow.
+
+# For the sake of demonstration, I have loosened the line length rule.
+# This demonstrates that my configuration is being ignore for files outside my project
+# directory.
+line-length = 999
+
+# I tried using this to exclude python's own standard library and any pip-installed
+# dependencies, but it does not work.  I tried many variants to be sure it
+# wasn't a simple typo issue.
+extend-exclude = [
+    "Lib",
+    "Lib/*",
+    "Lib/*.py",
+    "Lib/**",
+    "Lib/**.py",
+    "Lib/**/*.py",
+    "site-packages",
+    "site-packages/*.py",
+    "site-packages/**.py",
+    "site-packages/**/*.py",
+    "C:/Users/cspot/scoop/apps/python/3.11.2/**/*.py"
+]
+
+[tool.pyright]
+# Pyright config also applies to files *outside* of my project directory, so I
+# can use it to control the diagnostics I see.
+# This is not ideal, but it's better than it being *impossible* to configure,
+# which is the case with ruff.
+
+include = ["src"]
+typeCheckingMode = "basic"
+reportMissingImports = false
+ignore = [
+    # Hack: must be relative glob, so we ascend to fs root with a lot of ../
+    "../../../../../../../../**/python/*/Lib"
+]
