@@ -1,19 +1,10 @@
-# Title
+# PDM endless loop on install
 
-Description
+Reproduction:
 
-```bash
-# repro code goes here
-set -euxo pipefail
+Assume python3 and pip are installed, so that `python --version` is python3.
 
-echo Hello world!
-```
-
-*The script above is extracted, executed by bash in docker, and stdout is inserted below.  All the magic happens in ./.github/run.sh*
-
-[Logs](https://github.com/cspotcode/repros/runs/76710127)
-
-```output
-++ echo Hello 'world!'
-Hello world!
+```shell
+pip install pdm
+python -m pdm install
 ```

@@ -1,0 +1,7 @@
+[project]
+requires-python = ">=3.8"
+
+dependencies = [
+     "pytest-cov",
+     "coveralls"
+]
