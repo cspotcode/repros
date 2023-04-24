@@ -11,7 +11,7 @@ python --version
 python -m pip --version
 python -m pdm install
 
-# Observe that it hands indefinitely
+# Observe that it hangs indefinitely
 # Terminate with Ctrl+C, then try the following:
 
 python -m pdm install -v
