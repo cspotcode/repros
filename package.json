@@ -2,7 +2,7 @@
     "name": "example-git-dep",
     "version": "1.0.0",
     "devDependencies": {
-        "workaround-broken-npm-prepack-behavior": "https://github.com/cspotcode/workaround-broken-npm-prepack-behavior#main"
+        "workaround-broken-npm-prepack-behavior": "https://github.com/cspotcode/workaround-broken-npm-prepack-behavior#23b5313667192ba36ec1dcccd316ece87ced2812"
     },
     "main": "generated.js",
     "scripts": {
