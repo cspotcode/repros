@@ -1,5 +1,6 @@
 import {writeFileSync} from 'fs';
-import {fileUrlToPath, resolve} from 'path';
+import {fileURLToPath} from 'url';
+import {resolve} from 'path';
 
 console.log('This is our prepack script. Building the module now.');
-writeFileSync(resolve(fileUrlToPath(import.meta.url), '/generated.js'), 'exports.foo = "hello world"');
+writeFileSync(resolve(fileURLToPath(import.meta.url), '../generated.js'), 'exports.foo = "hello world"');
